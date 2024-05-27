@@ -23,7 +23,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "/vite-project/$1"
+        "dest": "/vite-project/build/$1"
       }
     ]
   }
