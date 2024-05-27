@@ -15,7 +15,15 @@ dotenv.config(
 const app = express();
 const PORT = process.env.PORT || 5152;
 
-app.use(cors());
+app.use(cors({
+
+origin: ["https://deploy-mern-1whq.vercel.app"],
+methods: ["POST", "GET"],
+credentials: true
+}
+I
+    
+));
 app.use(express.json());
 
 // MongoDB connection
