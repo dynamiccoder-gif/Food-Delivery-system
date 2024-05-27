@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/server.js",
+        "use": "@vercel/node",
+        "config": {
+          "includeFiles": ["backend/**"]
+        }
+      },
+      {
+        "src": "vite-project/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "vite-project/build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/backend/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/vite-project/$1"
+      }
+    ]
+  }
+  
