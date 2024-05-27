@@ -6,7 +6,7 @@ const OrderList = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/orders/')
+        axios.get('https://food-delivery-system-7yeu.vercel.app/api/orders/')
             .then(response => setOrders(response.data))
             .catch(error => console.log(error));
     }, []);
