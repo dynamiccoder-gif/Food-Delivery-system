@@ -7,7 +7,7 @@ const AddOrder = () => {
     const [message, setMessage] = useState(''); // State for the success or error message
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/foods')
+        axios.get('https://food-delivery-system-7yeu.vercel.app/api/foods')
             .then(response => setFoods(response.data))
             .catch(error => console.log(error));
     }, []);
@@ -25,7 +25,7 @@ const AddOrder = () => {
             return;
         }
         const totalPrice = selectedFood.price * order.quantity;
-        axios.post('http://localhost:5000/api/orders', { ...order, totalPrice })
+        axios.post('https://food-delivery-system-7yeu.vercel.app/api/orders', { ...order, totalPrice })
             .then(response => {
                 setMessage('Your order has been added successfully!');
                 // Clear the form fields after submission
