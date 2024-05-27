@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 5152;
 
 app.use(cors({
 
-origin: ["https://deploy-mern-1whq.vercel.app"],
+origin: ["https://food-delivery-system.vercel.app"],
 methods: ["POST", "GET"],
 credentials: true
 }
