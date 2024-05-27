@@ -1,5 +1,5 @@
 {"version": 2,
 "builds": [{ "src": "./server.js", "use":
-"avercel/nade" }].
+"avercel/nade" }],
 "routes": [{ "src": "/( .* )", "dest": "/" }]
 }
