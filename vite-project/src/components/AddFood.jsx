@@ -12,7 +12,7 @@ const AddFood = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/api/foods', food)
+        axios.post('https://food-delivery-system-7yeu.vercel.app/api/foods', food)
             .then(response => {
                 setMessage('Your item has been added successfully!');
                 // Clear the form fields after submission
